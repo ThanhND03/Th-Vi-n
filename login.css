@@ -1,0 +1,243 @@
+ li.form_login_signup {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 130px;
+    height: 25px;
+    background: #5c5b5b;
+    margin:0 300px;
+}
+
+.flex-menu-top{
+    display: flex;
+}
+
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: aliceblue;
+    background-image: url("bg.jpeg");
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+/* form */
+.form_container{
+    position: absolute;
+    max-width: 600px;
+    min-height: 400px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 105;
+    background: #efeeee;
+    padding:20px ;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.home.show .form_container {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.home.show::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.signup_form{
+    display: none;
+}
+
+.form_container.active .signup_form {
+    display: block;
+}
+
+.form_container.active .login_form {
+    display: none;
+}
+
+.form_close{
+    position: absolute;
+    top: 42px;
+    right:25px;
+    font-size: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.form_container h2{
+    font-size: 30px;
+    margin: 15px 0px;
+}
+
+.input_button{
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+.input_button input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #959595;
+    border-radius:7px;
+    cursor: pointer;
+    color: #232323;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input_button input:hover{
+    color: white;
+    background-color: #f9683c;
+}
+
+.input_button img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 32%;
+}
+
+.text_note{
+    position: relative;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #959595;
+}
+
+.text_note hr.left{
+    position: absolute;
+    width: 43%;
+    left: 0;
+    border: 0.1px solid #959595;
+    opacity: 0.3;
+}
+
+.text_note hr.right{
+    position: absolute;
+    width: 43%;
+    right: 0;
+    top: 0;
+    border: 0.1px solid #959595;
+    opacity: 0.3;
+}
+
+.input_box{
+    border: 1px solid #959595;
+    color: #5c5b5b;
+    border-radius: 7px;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 43px;
+}
+
+.input_box label{
+    font-size: 13px;
+    margin: 10px 10px;
+}
+
+.input_box input{
+    width: 99%;
+    height: 45%;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background: #efeeee;
+  
+
+}
+
+.input_box input:focus{
+    border-color:#F05626;
+}
+
+.input_box i{
+    position: absolute;
+    top: 50%;
+    right:5px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    cursor: pointer;
+    color: #959595;
+}
+
+.option_field{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form_container a{
+    color: #F05626;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.form_container a:hover{
+    text-decoration: underline;
+}
+
+.checkbox{
+    display: flex;
+    column-gap: 4px;
+    white-space: nowrap;
+    font-size: 20px;
+}
+
+.checkbox input{
+    accent-color:#F05626 ;
+    cursor: pointer;
+}
+
+.checkbox label{
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    color: #0b0217;
+}
+
+.form_container .button{
+    background-color: #F05626;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form_container .login_signup{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+}
